@@ -5,11 +5,18 @@
 <title>home</title>
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<div>
+		<h1>react</h1>
+		<ol>
+			<li><a data-th-href="@{/react/demo1}">demo1入门</a></li>
+			<li><a data-th-href="@{/react/demo2}">demo2复合组件</a></li>
+			<li><a data-th-href="@{/react/demo3}">demon3 State(状态)</a></li>
+		</ol>
+	</div>
 	<div id="example"></div>
 	<script type="text/javascript" data-th-src="@{/webjars/react/react.js}"></script>
 	<script type="text/javascript" data-th-src="@{/webjars/react/react-dom.js}"></script>
-	<script type="text/javascript" data-th-src="@{/js/lib/browser/browser.min.js}"></script>
-	<script type="text/babel" data-th-src="@{/js/home.js}"></script>
+	<script type="text/javascript" data-th-src="@{/webjars/babel-standalone/babel.js}"></script>
+	<script type="text/babel" data-th-src="@{/js/home.jsx}"></script>
 </body>
 </html>

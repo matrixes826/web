@@ -61,6 +61,11 @@
 			<artifactId>react</artifactId>
 			<version>RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>babel-standalone</artifactId>
+			<version>RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
