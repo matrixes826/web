@@ -1,0 +1,19 @@
+app:
+  name: web
+  description: ${app.name} is a Spring Boot application
+server:
+  port: 8080
+  context-path: /web
+spring:
+  main:
+    banner-mode: true
+  resources:
+    cache-period: 60
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+      cache: true
+      enabled: true
+      gzipped: true
