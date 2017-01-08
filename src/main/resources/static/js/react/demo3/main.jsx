@@ -10,7 +10,7 @@ var LikeButton = React.createClass( {
         return (
             <p onClick={this.handleClick}>
                 你<b>{text}</b>我。点我切换状态。
-      </p>
+            </p>
         );
     }
 });
@@ -20,3 +20,32 @@ ReactDOM.render(
     document.getElementById( 'example' )
 );
 
+
+class Toggle extends React.Component {
+    constructor( props ) {
+        super( props );
+        this.state = { isToggleOn: true };
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind( this );
+    }
+
+    handleClick() {
+        this.setState( prevState => ( {
+            isToggleOn: !prevState.isToggleOn
+        }) );
+    }
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        );
+    }
+}
+
+ReactDOM.render(
+    <Toggle />,
+    document.getElementById( 'root' )
+);

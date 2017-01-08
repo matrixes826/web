@@ -29,4 +29,22 @@ public class ReactController {
 		return "react/demo3";
 	}
 
+	@GetMapping("demo4")
+	public String demo4() {
+		logger.trace("enter demo4");
+		return "react/demo4";
+	}
+
+	@GetMapping("demo5")
+	public String demo5() {
+		logger.trace("enter demo5");
+		return "react/demo5";
+	}
+
+	@GetMapping("demo6")
+	public String demo6() {
+		logger.trace("enter demo6");
+		return "react/demo6";
+	}
+
 }
